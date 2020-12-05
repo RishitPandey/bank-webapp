@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
         /*	
@@ -73,6 +73,7 @@ h2 a {
 	  margin: 0 auto;
   display: table;
   padding: 0 0 8em 0;
+  font-weight: bold !important;
 }
 
 .container td, .container th {
@@ -93,6 +94,7 @@ h2 a {
 
 .container th {
 	  background-color: #1F2739;
+      
 }
 
 .container td:first-child { color: #FB667A; }
@@ -145,7 +147,7 @@ h2 a {
                         <td><%= res.name %> </td>
                         <td><%= res.email %> </td>
                         <td><%= res.currentbal %> </td>
-                        <td><a type="button" class="btn btn-link" href="/<%= res.name %> ">View Profile</a></td>
+                        <td style="text-decoration: none;" class="btn btn-dark"><a style="text-decoration: none; color: white;" type="button" class="btn btn-link" href="/<%= res.name %> "><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 1H4a1 1 0 0 0-1 1v10.755S4 11 8 11s5 1.755 5 1.755V2a1 1 0 0 0-1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/><path fill-rule="evenodd" d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg></a> View</td>
                     </tr>
                <% }); %>
                 <!--<tr>

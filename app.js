@@ -142,6 +142,6 @@ app.post('/money', async (req,res) => {
     }
 });
 
-app.listen(process.env.PORT,() => {
+app.listen(3000,() => {
     console.log('server started running...')
 });
