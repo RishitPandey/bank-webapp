@@ -139,7 +139,7 @@ app.post('/money', async (req,res) => {
                 }
             }
     );
-    return res.status(200).redirect('/');
+    return res.status(200).redirect('/customers');
     } catch(error) {
         console.log(error);
         return res.status(400).send(error);
