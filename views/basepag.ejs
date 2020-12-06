@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Bank: Home</title>
     <style>
         /*	
 	Side Navigation Menu V2, RWD
@@ -47,6 +47,18 @@ h2 a {
   color: #FB667A;
   text-decoration: none;
 }
+.button-container {
+    height: 200px;
+    position: relative;
+    border: 3px solid greenyellow;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .blue { color: #185875; }
 .yellow { color: #FFF842; }
@@ -73,6 +85,7 @@ h2 a {
 	  margin: 0 auto;
   display: table;
   padding: 0 0 8em 0;
+  font-weight: bold !important;
 }
 
 .container td, .container th {
@@ -93,6 +106,7 @@ h2 a {
 
 .container th {
 	  background-color: #1F2739;
+      
 }
 
 .container td:first-child { color: #FB667A; }
@@ -125,43 +139,13 @@ h2 a {
     </style>
 </head>
 <body>
-   <table class="container">
-    <thead>
-        <tr>
-            <th><h1>Customers</h1></th>
-            <th><h1>Email</h1></th>
-            <th><h1>Balance</h1></th>
-            <th><h1>Profile</h1></th>
-        </tr>
-    </thead>
-    <tbody>
-        <% response.forEach((res) => { %>
-            <tr>
-                
-                <td><%= res.name %> </td>
-                <td><%= res.email %> </td>
-                <td><%= res.currentbal %> </td>
-                <td style="text-decoration: none;" class="btn btn-dark"><a style="text-decoration: none; color: white;" type="button" class="btn btn-link" href="/<%= res.name %> ">View <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 1H4a1 1 0 0 0-1 1v10.755S4 11 8 11s5 1.755 5 1.755V2a1 1 0 0 0-1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/><path fill-rule="evenodd" d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg></a></td>
-            </tr>
-       <% }); %>
-    </tbody>
-</table>
-   <div class="container mt-3">
-    <h1><span class="blue">Bank</span>Transfer: <span class="yellow"><%= current  %> </pan></h1>
-    <form class="fomr-control" action="/money" method="POST">
-        <label for="select">Choose your customer:</label>
-        <select class="custom-select custom-select-sm mb-2" name="select" id="customers">
-         <% response.forEach((res) => { %>
-             <option><%= res.name %></option>
-         </br>
-         <% }); %>
-        </select>
-        <label for="current">Tranferring from</label>
-        <input class="form-control mb-2" type="text" name="current" value="<%= current %>">
-    <label for="money">Enter the Amount</label>
-        <input class="form-control" type="number" name="money">
-        <button class="btn btn-success mt-2" type="submit">Submit</button>
-        </form>
-   </div>
+    <div style="margin-top: 200px;" class="contanier">
+        <h1><span class="blue">The </span>TSF <span class="blue">Banking </span> <span class="yellow">Solutions</pan></h1>
+            <h2>Created by <a href="https://github.com/rishitpandey" target="_blank">Rishit</a></h2>
+            <h2>
+              <a style="font-weight: bold; font-size: 21px; color: khaki;" href="/customers"><i style="font-size: 60px;" class="large material-icons">account_box</i></br></br>View Our Customers</a>
+            </h2>
+    </div>
+    
 </body>
 </html>

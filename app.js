@@ -23,7 +23,11 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 let selected_user = undefined;
 
-app.get('/', async (req, res) => {
+app.get('/',(req,res) => {
+    res.render('basepag');
+})
+
+app.get('/customers', async (req, res) => {
     try {
         let response = [];
         const usersRef = db.collection('users');
